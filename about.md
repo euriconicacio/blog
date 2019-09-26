@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Caffeine, coding and general hacking. PhD Candidate + MSc degree in Geodetic Sciences, BEng in Cartographic Engineering. GIS + Physical Geodesy Specialist, Data Scientist (focus in Geo Big Data), Software Developer and Ethical Hacker + InfoSec Consultant/Operator.
 
-### More Information
+[Open Source + Hacker Culture] Advocate.
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+Enjoy. =P
