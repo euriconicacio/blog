@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Caffeine, coding and general hacking. PhD Candidate + MSc degree in Geodetic Sciences, BEng in Cartographic Engineering. GIS + Physical Geodesy Specialist, Data Scientist (focus in Geo Big Data), Software Developer and Ethical Hacker + InfoSec Consultant/Operator.
+Caffeine, coding and general hacking. PhD Candidate + MSc degree in Geodetic Sciences, BEng in Cartographic Engineering. GIS + Physical Geodesy Specialist, Data Scientist (focus in Geo Big Data), Software Developer and Ethical Hacker + InfoSec Consultant/Operator + Independent Cybersecurity Researcher.
 
 [Open Source + Hacker Culture] Advocate.
 
