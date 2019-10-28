@@ -5,7 +5,7 @@ layout: post
 title: Dia 5 de 100 - Wordlists com Crunch - Parte 1 de 2
 ---
 
-Conforme apontado na última postagem, hoje abordaremos algo um pouco mais _hackingtheworld-like_. Entretanto, começaremos aos poucos, com um tema "acessório" e não necessariamente "aplicado" - pelo menos por enquanto. Trata-se da criação e da manipulação de **dicionários** (ou _**wordlists**_) com o software/script **crunch**. Esse tópico ser a dividido em duas partes - uma mais simples, outra mais complexa, mas ambas mutuamente complementares e com informações adicionais "para a vida". 🏴‍☠️ 
+Conforme apontado na última postagem, hoje abordaremos algo um pouco mais _hackingtheworld-like_. Entretanto, começaremos aos poucos, com um tema "acessório" e não necessariamente "aplicado" - pelo menos por enquanto. Trata-se da criação e da manipulação de **dicionários** (ou _**wordlists**_) com o software/script **crunch**. Esse tópico será dividido em duas partes - uma mais simples, outra mais complexa, mas ambas mutuamente complementares e com informações adicionais "para a vida". 🏴‍☠️ 
 
 Antes de mais nada, vamos entender o que cada uma das expressões do título significa. 
 
