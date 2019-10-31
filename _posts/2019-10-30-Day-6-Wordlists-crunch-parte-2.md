@@ -13,14 +13,14 @@ The _charset.lst_ file (which comes compiled on Kali - check /usr/share/crunch t
 
 Some of the character sets offered by _charset.lst_ are:
 
-* lalpha: lowercase letters only;
-* ualpha: uppercase letters only;
-* lalpha-numeric: lowercase letters and numbers;
-* ualpha-numeric: uppercase letters and numbers;
-* lalpha-numeric-all-space: lowercase letters, numbers and special characters like ?, ;, :, _space_, etc;
-* ualpha-numeric-all-space: uppercase letters, numbers and special characters like ?, ;, :, _space_, etc;
-* mixalpha: uppercase and lowercase letters;
-* mixalpha-numeric-all-space: lowercase letters, uppercase letters, numbers and special characters and space.
+* _lalpha_: lowercase letters only;
+* _ualpha_: uppercase letters only;
+* _lalpha-numeric_: lowercase letters and numbers;
+* _ualpha-numeric_: uppercase letters and numbers;
+* _lalpha-numeric-all-space_: lowercase letters, numbers and special characters like ?, ;, :, _space_, etc;
+* _ualpha-numeric-all-space_: uppercase letters, numbers and special characters like ?, ;, :, _space_, etc;
+* _mixalpha_: uppercase and lowercase letters;
+* _mixalpha-numeric-all-space_: lowercase letters, uppercase letters, numbers and special characters and space.
 
 There are some other predefined sets of characters, feel free to use `cat /usr/share/crunch/charset.lst` and see something like this:
 
