@@ -9,7 +9,7 @@ Conforme apontado na última postagem, hoje abordaremos algo um pouco mais _hack
 
 Antes de mais nada, vamos entender o que cada uma das expressões do título significa. 
 
-# A tal da _wordlist_
+### A tal da _wordlist_
 
 Uma _**wordlist**_ nada mais é que um conjunto de _strings_ que será testada, uma a uma, por alguma aplicação (normalmente em uma abordagem de _brute force_  [força bruta]) para descobrir uma senha - seja esta de um sistema, um arquivo, um site, uma rede sem fio, entre outras. Por exemplo, usa-se uma _wordlist_ associada ao Hydra ou ao John the Ripper para descobrir senhas de emails, sites ou arquivos; usa-se uma _wordlist_ associada ao _aircrack-ng_ para descobrir a senha de uma rede sem fio; entre outras aplicações. Como os métodos constituem tentar _string_ por _string_ à exaustão, seu uso é conhecido justamente como força bruta - o método vai persistir em tentativa-e-erro até encontrar a resposta correta.
 
@@ -17,15 +17,15 @@ Abrindo um parênteses bastante pertinente, é exatamente daqui surge a ideia de
 
 Voltando à _wordlist_ , sua criação pode ser tão abrangente quanto possível - pode-se ter um dicionário com algumas dezenas de GB com trilhões de combinações de caracteres.. 🙄 - ou tão restrito quanto se queira - vide caso da senha numérica de 8 dígitos terminada em "1983". Note-se que, apesar de existir ainda um terceiro caso possível, considerando um público brasileiro, um determinado nicho desse grupo ou um determinado alvo, quando se usa um dicionário com milhares de senhas mais "comuns", este não será abordado aqui, pois sua criação é feita por amostragem, não pela combinação de caracteres. Entretanto, para os dois primeiros casos e para todos que a eles se assemelham, a geração do dicionário dá-se com o uso do o software/script **crunch**.
 
-# O tal do _crunch_
+### O tal do _crunch_
 
-### Descrição
+#### Descrição
 
 _Long story short_, o _*crunch*_  é um _software_ disponivel no magnífico ambiente Linux (quase tudo que eu postar aqui valerá tao somente para esse ambiente, acostume-se e adapte-se! 😜) para gerar _wordlists_ através de elaboração de todas combinações possíveis de um conjunto de caracteres informados. O _crunch_ já vem pré-instalado no Kali Linux, porém também pode ser instalado na sua distro com um simples `sudo apt install crunch`. 
 
 Obs.: recomenda-se leitura e consulta do manual do comando (`man crunch`) para ter uma noção completa de todas as suas opções. Aqui vou explorar umas duas ou três somente. 
 
-### Gerando uma  _wordlist_ simples
+#### Gerando uma  _wordlist_ simples
 
 A sintaxe básica do _crunch_ é `$ crunch min max [char] -o arquivo.txt`, onde _min_ e _max_ representam respectivamente o tamanho mínimo e máximo dE cada _string_ gerada, [char] é uma sequência de caracteres que comporão cada uma dessas _strings_ e _-o arquivo.txt_ é a opção para gravar o _output_ em "arquivo.txt". Por exemplo:
 
@@ -47,7 +47,7 @@ Essa versão do _crunch_ é especialmente interessante para descobrir senhas de 
 $ crunch 8 8 1234567890ABCDEF -t @@A245BD -o dic.txt
 ```
 
-# Conclusão parcial
+### Conclusão parcial
 
 Nesta primeira parte, tivemos uma introdução ao tópico de _wordlist_ e ao uso do _crunch_, mostrando inclusive a geração de dicionários simples e para ocasiões "especiais". Na próxima postagem, adianto que apresentarei uma geração um pouco mais complexa, com base no arquivo _charset.lst_. 😉
 
