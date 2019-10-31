@@ -5,8 +5,6 @@ layout: post
 title: Day 6 of 100 - Wordlists with Crunch - Part 2 of 2
 ---
 
-*********************************
-
 Moving on with our crunch+wordlists subject (from now on, writing in English). Since we discuessed the main basic aspects of wordlists, crunch and some special situations concerning them, this post shall be shorter - I intend to present a little mopre complex method to generete wordlists: using _charset.lst_.
 
 ### First of all, charset dot what?!
@@ -26,7 +24,7 @@ Some of the character sets offered by _charset.lst_ are:
 
 There are some other predefined sets of characters, feel free to use `cat /usr/share/crunch/charset.lst` and see something like this:
 
-<img src="http://euriconicacio.github.io/blog/images/d6of100_img1.png" width="60%"><br />
+<img src="http://euriconicacio.github.io/blog/images/d6of100_img1.png" width="100%"><br />
 ###### _Example of output for cat charset.lst_
 
 ### Using _crunch_ with _chartset.lst_
