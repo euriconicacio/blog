@@ -70,3 +70,5 @@ And, in the end, _**why is that important at all**_? For now, let's just conside
 For instance, let's say that after using airodump-ng, I get as an reachable BSSID/ESSID a wireles network named **"NET_2GB8373B"** and addressed as **"98:1E:19:B8:37:3B"**. For _gods_ sake, the default password for that network totally is _**19B8373B**_ (**FTR #2**: I would try that even for the network on the example image above with ESSID _"HOME-**2988**"_ and BSSID _B8:9B:C9:59:**29:88**_. See the pattern?!)
 
 So, this is a tested and approved method for "guessing" passwords of wireless networks with default ESSIDs through two different methods. Hope you all enjoy this post and next time (I will work to keep schedule and post until Monday..), I promise I will talk about Google Hacking. See you then!
+
+#100daysofcode #day5of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld #macaddress #bssid #wifi #airodump #scapy
