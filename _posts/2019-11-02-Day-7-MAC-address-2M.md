@@ -26,7 +26,7 @@ I called this a _classic 'h4x0r'_ method just because it might seem simple to an
    * Let's assume your wireless interface name is _wlan0_, for instance. After starting monitor mode, its name might change to _wlan0mon_.
 3. Start package capturing of raw 802.11 frames on the wireless interface under monitor mode with **airodump-ng**:
    * _Once again, skipping some basic steps because of reasons_, just type `sudo airodump-ng start wlan0mon` (since we assumed _wlan0_ was your wireless interface name and _wlan0mon_ its monitoring mode name), press enter and hold;
-  
+
    <img src="https://media.tenor.com/images/c44f2ad0c94d52a648dfdd24e1436834/tenor.gif">
 
 > _"HOLD... HOLD... HOOOOLD... HOOOOOOOOOOLD... **NOOOOOOWWWW!**"_ - William Wallace, Braveheart (1995)
@@ -71,4 +71,4 @@ For instance, let's say that after using airodump-ng, I get as an reachable BSSI
 
 So, this is a tested and approved method for "guessing" passwords of wireless networks with default ESSIDs through two different methods. Hope you all enjoy this post and next time (I will work to keep schedule and post until Monday..), I promise I will talk about Google Hacking. See you then!
 
-#100daysofcode #day5of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld #macaddress #bssid #wifi #airodump #scapy
+#100daysofcode #day7of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld #macaddress #bssid #wifi #airodump #scapy
