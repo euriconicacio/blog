@@ -49,16 +49,16 @@ I have spent some time on this subject and developed a simple Python3 routine th
 sudo pip3 install scapy
 ```
 
-After that, feel free to run the code ahead under root privilege:
+After that, feel free to _**run the code ahead under root privilege**_:
 
 ```python
 from scapy.layers.dot11 import Dot11
 from scapy.sendrecv import sniff
 def sniffer(pck):
     if pck.haslayer(Dot11):
-        if pck.type == 0 and pck.subtype == 8:
+        if pck.type == 0 and pck.subtype == 8: # Understand why in => https://en.wikipedia.org/wiki/Beacon_frame
                 print("AP BSSID: %s - SSID: %s" %(pck.addr2, pck.info))
-sniff(iface="wlan0", prn=sniffer, store=0)
+sniff(iface="wlan0", prn=sniffer, store=0) pass sniff(iface="mon0", count=0, prn=Handler, store=0) # don't forget sudo rfkill unblock wifi && sudo airmon-ng start wlan0 before this
 ```
 
 That code shall print a list of AP BSSID/ESSID similar to those in airodump-ng. In case of issues, check dependencies, privileges and other obstacles; it works really fine for me. =P
