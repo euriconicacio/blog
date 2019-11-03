@@ -27,7 +27,7 @@ I called this a _classic 'h4x0r'_ method just because it might seem simple to an
 3. Start package capturing of raw 802.11 frames on the wireless interface under monitor mode with **airodump-ng**:
    * _Once again, skipping some basic steps because of reasons_, just type `sudo airodump-ng start wlan0mon` (since we assumed _wlan0_ was your wireless interface name and _wlan0mon_ its monitoring mode name), press enter and hold;
   
-   <img src="https://tenor.com/view/braveheart-hold-on-gif-13268605">
+   <img src="https://media.tenor.com/images/c44f2ad0c94d52a648dfdd24e1436834/tenor.gif">
 
 > _"HOLD... HOLD... HOOOOLD... HOOOOOOOOOOLD... **NOOOOOOWWWW!**"_ - William Wallace, Braveheart (1995)
 
