@@ -15,4 +15,4 @@ Por fim, ainda neste postagem introdutória, adianto que não vou falar sobre fe
 
 Amanhã começaremos a parte prática, com exemplo básico, e depois de amanhã o bicho pega!
 
-#100daysofcode #day2of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld
+#100daysofcode #day2of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheplanet

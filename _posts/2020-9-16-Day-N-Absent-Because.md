@@ -13,4 +13,4 @@ My main plans for the next days are: talking about the Forensic Analysis materia
 
 So, that's it. Thanks for your patience and attention and keep hacking the world. 😉
 
-#100daysofcode #dayNof100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld
+#100daysofcode #dayNof100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheplanet

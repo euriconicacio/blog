@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Caffeine, coding and general hacking. PhD Candidate + MSc degree in Geodetic Sciences, BEng in Cartographic Engineering. GIS + Physical Geodesy Specialist, Data Scientist (focus in Geo Big Data), Software Developer and Ethical Hacker + InfoSec Consultant/Operator + Independent Cybersecurity Researcher.
+Senior Security & Software Engineer | PhD Candidate & MSc & PMP & MBA | Independent CyberSecurity Researcher | CTF player @ ArenaQuakerCTF & 7h3B14ckKn1gh75 [ h3llh0und ]
 
 [Open Source + Hacker Culture] Advocate.
 
-Enjoy. =P
+HACK THE PLANET.

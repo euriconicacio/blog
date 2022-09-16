@@ -71,4 +71,4 @@ For instance, let's say that after using airodump-ng, I get as an reachable BSSI
 
 So, this is a tested and approved method for "guessing" passwords of wireless networks with default ESSIDs through two different methods. Hope you all enjoy this post and next time (I will work to keep schedule and post until Monday..), I promise I will talk about Google Hacking. See you then!
 
-#100daysofcode #day7of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld #macaddress #bssid #wifi #airodump #scapy
+#100daysofcode #day7of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheplanet #macaddress #bssid #wifi #airodump #scapy

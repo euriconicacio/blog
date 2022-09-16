@@ -100,4 +100,4 @@ Today, we've explored the definition, brief history and usage of google hacking,
 
 On our next post on this theme - the second and last one on this theme - we will discuss some *darker* approaches on Google Dorks. In case of any issues, feel free to contact me at any time.
 
-#100daysofcode #day8of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld #googlehacking #googledorks
+#100daysofcode #day8of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheplanet #googlehacking #googledorks

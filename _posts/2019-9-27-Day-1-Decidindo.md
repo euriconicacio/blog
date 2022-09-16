@@ -15,4 +15,4 @@ Dessa forma, decidi delinear o **100DaysOfCode Challenge** como segue:
 
 Bom, agora que os principais condicionantes e limitantes do desafio foram estabelecidos, amanhã começamos o *real coding*.
 
-#100daysofcode #day1of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld
+#100daysofcode #day1of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheplanet

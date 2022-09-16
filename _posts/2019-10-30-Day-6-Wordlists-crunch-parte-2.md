@@ -53,4 +53,4 @@ Today, we've explored the usage of crunch command to generate wordlists, potenti
 
 In case of any issues, feel free to contact me at any time.
 
-#100daysofcode #day5of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheworld #wordlist #crunch
+#100daysofcode #day5of100 #programming #coding #code #python #developer #coder #programmer #peoplewhocode #hacking #ethicalhacking #hacktheplanet #wordlist #crunch
