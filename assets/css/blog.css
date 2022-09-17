@@ -148,7 +148,7 @@ main {
 
 @media screen and (max-width: 350px) {
   #img-wrapper img {
-    max-width: 50px;
+    max-width: 100px;
   }
   #bio {
     align-items: flex-start;
