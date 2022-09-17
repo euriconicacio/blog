@@ -12,6 +12,3 @@ contact:
     url: https://github.com/euriconicacio
   - title: twitter
     url: https://twitter.com/euriconicacio
-  - title: email
-    email_configs:
-    - to: 'nckbr@proton.me'
