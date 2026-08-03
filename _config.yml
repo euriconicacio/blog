@@ -21,8 +21,6 @@ social:
     url: https://github.com/euriconicacio
   - title: LinkedIn
     url: https://br.linkedin.com/in/euriconicacio
-  - title: Medium
-    url: https://medium.com/@euriconicacio
 
 markdown: kramdown
 kramdown:

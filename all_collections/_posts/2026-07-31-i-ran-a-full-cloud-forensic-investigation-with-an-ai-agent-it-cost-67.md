@@ -13,7 +13,7 @@ image: /assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai
 >
 > The token counts, timings and costs below are mine — they measure my own tooling, not the client’s. Every client-identifying detail has been removed or replaced, as in the companion post.
 
-In [the previous post](https://euriconicacio.medium.com/cloud-forensics-in-the-age-of-ai-agents-a-field-report-461851da7708) I described the method: an agent-assisted incident response on a compromised AWS credential — 3,122 API calls reconstructed twice from independent sources, 298,196 raw log events parsed from scratch as a cross-check, 17,776 access logs downloaded on a hunch that turned out to reverse a published conclusion, a controlled authorization experiment, and the writing of the response that closed the case.
+In [the previous post]({{ site.baseurl }}/cloud-forensics-in-the-age-of-ai-agents-a-field-report/) I described the method: an agent-assisted incident response on a compromised AWS credential — 3,122 API calls reconstructed twice from independent sources, 298,196 raw log events parsed from scratch as a cross-check, 17,776 access logs downloaded on a hunch that turned out to reverse a published conclusion, a controlled authorization experiment, and the writing of the response that closed the case.
 
 That post was about how the work was done, and about the three times the machine was confidently wrong.
 
