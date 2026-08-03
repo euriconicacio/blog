@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<header class="masthead">
+  <div class="wrap identity">
+    <img class="sigil" src="{{ '/assets/images/hellhound-640.jpg' | relative_url }}"
+         alt="" width="640" height="548" fetchpriority="high">
+    <div>
+      <h1>{{ site.title }}</h1>
+      <p class="tagline">{{ site.tagline }}</p>
+      <nav class="links">
+        <a href="{{ site.home_url }}">home</a>
+        {%- for s in site.social %}
+        <a href="{{ s.url }}" rel="me noopener">{{ s.title | downcase }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="feed">
+  <div class="wrap">
+    <p class="feed-label">Writing</p>
+    {%- for post in site.posts %}
+    <a class="entry" href="{{ post.url | relative_url }}">
+      <span class="entry-meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        {%- if post.content %} · {{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min read{% endif %}
+      </span>
+      <h2 class="entry-title">{{ post.title }}</h2>
+      {%- if post.description %}
+      <p class="entry-desc">{{ post.description | strip_newlines | truncate: 190 }}</p>
+      {%- endif %}
+    </a>
+    {%- endfor %}
+  </div>
+</main>

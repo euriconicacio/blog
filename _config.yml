@@ -1,0 +1,63 @@
+title: h3llh0und
+tagline: Field notes on offensive security, cloud forensics and agentic tooling
+description: >-
+  Long-form field notes by Eurico Nicacio (h3llh0und) — offensive security,
+  cloud forensics, and what happens when you point an agent at real work.
+url: "https://euriconicacio.github.io"
+baseurl: "/blog"
+lang: en
+
+author:
+  name: Eurico Nicacio
+  handle: h3llh0und
+  email: nckbr@proton.me
+
+home_url: "https://euriconicacio.github.io/"
+
+social:
+  - title: X
+    url: https://x.com/euriconicacio
+  - title: GitHub
+    url: https://github.com/euriconicacio
+  - title: LinkedIn
+    url: https://br.linkedin.com/in/euriconicacio
+  - title: Medium
+    url: https://medium.com/@euriconicacio
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+# A post dated later today must not vanish just because the build ran first.
+future: true
+
+collections_dir: all_collections
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /:title/
+
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

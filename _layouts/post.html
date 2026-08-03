@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<header class="masthead">
+  <div class="wrap identity">
+    <a href="{{ '/' | relative_url }}" aria-label="{{ site.title }} — all posts">
+      <img class="sigil" src="{{ '/assets/images/hellhound-640.jpg' | relative_url }}"
+           alt="" width="640" height="548">
+    </a>
+    <div>
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav class="links">
+        <a href="{{ site.home_url }}">home</a>
+        {%- for s in site.social %}
+        <a href="{{ s.url }}" rel="me noopener">{{ s.title | downcase }}</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </div>
+</header>
+
+<article class="article">
+  <div class="wrap article-header">
+    <span class="entry-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      · {{ content | number_of_words | divided_by: 220 | plus: 1 }} min read
+    </span>
+    <h1 class="article-title">{{ page.title }}</h1>
+    {%- if page.description %}
+    <p class="lede">{{ page.description }}</p>
+    {%- endif %}
+  </div>
+
+  <div class="wrap prose">
+    {{ content }}
+  </div>
+
+  <div class="wrap article-footer">
+    <a href="{{ '/' | relative_url }}">← all posts</a>
+    <span>{{ site.author.name }} · {{ site.author.handle }}</span>
+  </div>
+</article>
