@@ -7,7 +7,7 @@ image: /assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machin
 ---
 > ***Disclaimer.*** *This is a personal open-source project, built and run on my own equipment and my own accounts. It has no connection to any current or former employer, and no client, employer or production environment was involved at any point. Every target was a* ***retired*** *Hack The Box machine, engaged over that platform’s own VPN and within its terms of service. No flag values appear in this post or in the repository — flag sharing is a platform violation regardless of a machine’s status.*
 
-![pwnloop: an autonomous engagement loop for lab machines](/assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machines/01.png)
+![pwnloop: an autonomous engagement loop for lab machines]({{ site.baseurl }}/assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machines/01.png)
 
 `pwnloop` is a Claude Code skill plus a disposable Kali container. You spawn a lab machine, hand it the address — **just the address** — and it runs the engagement end to end:
 
@@ -77,7 +77,7 @@ They are separate documents on purpose. A defender does not want your narrative,
 
 I started this on a Friday with a container and a 200-line skill file. By Sunday it had rooted ten retired Hack The Box machines and gone through seven releases, every one of them driven by something a run discovered the methodology was missing.
 
-![pwnloop: an autonomous engagement loop for lab machines](/assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machines/02.png)
+![pwnloop: an autonomous engagement loop for lab machines]({{ site.baseurl }}/assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machines/02.png)
 
 Redacted write-ups for all ten are in the repository. Times ranged from **three minutes** to **just over two hours**, and the spread is not really about difficulty — it is about how much of the chain was enumeration versus how much was code that had to be written on the spot.
 
@@ -116,7 +116,7 @@ Almost every agent I have seen fail, fails the same way, and it is not a capabil
 
 Five failures, all of them control-flow. So the skill file is not written as a prompt. It is written as a loop specification, and every rule maps to a failure it prevents:
 
-![pwnloop: an autonomous engagement loop for lab machines](/assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machines/03.png)
+![pwnloop: an autonomous engagement loop for lab machines]({{ site.baseurl }}/assets/images/posts/pwnloop-an-autonomous-engagement-loop-for-lab-machines/03.png)
 
 The grounding invariant is the one I would keep if I could keep only one. It forces the loop to operate on *observed* state rather than *plausible* state. An agent permitted to write “the service appears vulnerable” will eventually build on a vulnerability that was never there. An agent required to attach the request and the response cannot.
 

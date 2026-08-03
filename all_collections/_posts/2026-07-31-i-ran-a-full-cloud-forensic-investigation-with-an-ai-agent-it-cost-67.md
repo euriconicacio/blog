@@ -5,7 +5,7 @@ description: And 99% of that bill was the model re-reading context it had alread
 date: "2026-07-31 09:00:00 -0300"
 image: /assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/01.png
 ---
-![I ran a full cloud forensic investigation with an AI agent. It cost $67.](/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/01.png)
+![I ran a full cloud forensic investigation with an AI agent. It cost $67.]({{ site.baseurl }}/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/01.png)
 
 > ⚠️ Disclosure — please read this first
 >
@@ -25,7 +25,7 @@ I have not seen many honest accountings of what agent-assisted work actually cos
 
 Everything below comes from one session transcript — a JSONL file where every model response records a `usage` object. No estimation, no sampling. Four fields matter:
 
-![I ran a full cloud forensic investigation with an AI agent. It cost $67.](/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/02.png)
+![I ran a full cloud forensic investigation with an AI agent. It cost $67.]({{ site.baseurl }}/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/02.png)
 
 Sum them across the session and apply your provider’s rates. The script is at the end of this post; it is about fifteen lines.
 
@@ -37,13 +37,13 @@ Two caveats stated up front, because they bound everything that follows.
 
 ## The session
 
-![I ran a full cloud forensic investigation with an AI agent. It cost $67.](/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/03.png)
+![I ran a full cloud forensic investigation with an AI agent. It cost $67.]({{ site.baseurl }}/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/03.png)
 
 Fourteen messages. That number matters later.
 
 ## The bill
 
-![I ran a full cloud forensic investigation with an AI agent. It cost $67.](/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/04.png)
+![I ran a full cloud forensic investigation with an AI agent. It cost $67.]({{ site.baseurl }}/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/04.png)
 
 Sixty-seven dollars for the forensic reconstruction of a twenty-day intrusion across seventeen regions, twice, from independent sources.
 
@@ -82,7 +82,7 @@ This part is an **estimate**, not a measurement, and I’m labelling it as such.
 
 **To be explicit about the baseline, because this is where this kind of comparison usually cheats: the human writes scripts too.** Nobody reads 298,196 log events, and nobody greps 17,776 files by hand. They write a paginator loop, a gzip parser, a field-offset parser for a log format they haven’t parsed before, a billing query. Those are exactly the artifacts the agent produced — same language, same libraries, often the same approach. The hours below are authoring, debugging and running time, not reading time.
 
-![I ran a full cloud forensic investigation with an AI agent. It cost $67.](/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/05.png)
+![I ran a full cloud forensic investigation with an AI agent. It cost $67.]({{ site.baseurl }}/assets/images/posts/i-ran-a-full-cloud-forensic-investigation-with-an-ai-agent-it-cost-67/05.png)
 
 I’m not converting that into money. I don’t know what an hour of your team’s time costs, and inventing a rate would weaken the comparison rather than strengthen it. Price it yourself.
 

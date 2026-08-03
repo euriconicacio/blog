@@ -5,7 +5,7 @@ description: One compromised credential, twenty days, seventeen regions — 
 date: "2026-07-31 09:00:00 -0300"
 image: /assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/01.png
 ---
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/01.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/01.png)
 
 > ⚠️ Disclosure — please read this first
 >
@@ -108,7 +108,7 @@ The full-account parse paid for itself twice more, incidentally. It established 
 
 With the inventory settled, the sessionization is trivial: sort by time, cut wherever the gap exceeds thirty minutes. **Fourteen sessions across seven active days**, from Day 0 to Day +20.
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/02.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/02.png)
 
 Session 02 is the signature: **805 calls against 41 distinct services across 16 Regions in eighteen minutes.** Nobody does that by hand. That’s a permission-brute-forcing tool walking a service catalogue.
 
@@ -116,7 +116,7 @@ Session 12 is my favorite artifact of the whole campaign. One call — `sts:
 
 And the 84 successes, in full:
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/03.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/03.png)
 
 Four read-only APIs. Twenty days of effort against forty-three services in sixteen Regions produced *a list of bucket names and confirmation of their own identity*. Least privilege at the service boundary held — the grant was broad within S3 and nonexistent outside it, and that boundedness is the entire reason this is a post about detection rather than a post about a breach.
 
@@ -132,7 +132,7 @@ So you reason about ghosts. Reading an object costs money and generates telemetr
 
 The agent pulled usage by usage type for a 25-day pre-attack baseline and the 21-day attack window, computed the deviation of each attack-window peak from its baseline mean, and flagged the outliers:
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/04.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/04.png)
 
 Read rate went *down* during the attack window. Three rows got flagged, and this is where a fast tool becomes a liability if you let it write your conclusions: a z-score of 15,497 looks like the smoking gun of the century, and it is nothing at all. The baseline standard deviation is effectively zero, so any rounding-level movement produces an astronomical score. Look at the absolute columns instead — zeroes at the precision the API reports. The 44.5 is the same artifact: 854.6 against a baseline of 865.4 is *less* traffic wearing a scary number.
 
@@ -271,7 +271,7 @@ I couldn’t tell them apart, for a reason that’s almost funny: **the account 
 
 The severities are not close:
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/05.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/05.png)
 
 You cannot ship that ambiguity in a report. So we built the test — in a separate account, on infrastructure with no relationship to the client’s.
 
@@ -279,7 +279,7 @@ You cannot ship that ambiguity in a report. So we built the test — in a se
 
 **Controls, because a test without controls is an anecdote:** the same role calling two other services it also lacked permission for.
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/06.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/06.png)
 
 The controls confirm the role genuinely has nothing: two other services denied it explicitly, with two *different* error shapes. And the decisive comparison is the last two rows against the baseline — **the application existed. It was returned to the admin caller and withheld from the unprivileged one.**
 
@@ -299,7 +299,7 @@ My test had covered one cell of a two-by-two. I’d tested *application exists �
 
 Fortunately the test infrastructure was still up, so closing the matrix took minutes: one Region holding the application, two Regions holding nothing.
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/07.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/07.png)
 
 **The two top cells are byte-identical**, across three Regions, same status code, same body, no error of any kind.
 
@@ -307,7 +307,7 @@ The sharpest way to put it: an unauthorized caller sees *exactly* what an author
 
 I also confirmed how those calls land in the trail, which closes the loop with the incident:
 
-![Cloud Forensics in the Age of AI Agents: A Field Report](/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/08.png)
+![Cloud Forensics in the Age of AI Agents: A Field Report]({{ site.baseurl }}/assets/images/posts/cloud-forensics-in-the-age-of-ai-agents-a-field-report/08.png)
 
 Identical. That’s the incident’s signature, reproduced on demand in a controlled account.
 
