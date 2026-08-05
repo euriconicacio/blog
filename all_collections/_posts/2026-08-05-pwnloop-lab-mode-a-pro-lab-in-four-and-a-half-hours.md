@@ -9,7 +9,7 @@ image: /assets/images/posts/pwnloop-lab-mode-a-pro-lab-in-four-and-a-half-hours/
 
 ![pwnloop lab mode: a Pro Lab in four and a half hours]({{ site.baseurl }}/assets/images/posts/pwnloop-lab-mode-a-pro-lab-in-four-and-a-half-hours/01.png)
 
-Two days ago I wrote up [`pwnloop`](https://github.com/euriconicacio/pwnloop), an autonomous engagement loop that takes a single lab machine from an IP address to a root flag without checking in. The last line of that post's limitations section was that the sample had nothing multi-host in it.
+Two days ago I [wrote up]({{ site.baseurl }}/pwnloop-an-autonomous-engagement-loop-for-lab-machines/) `pwnloop`, an autonomous engagement loop that takes a single lab machine from an IP address to a root flag without checking in. The last line of that post's limitations section was that the sample had nothing multi-host in it.
 
 That gap is now closed. **Campaign mode** points the same loop at a *network*, and its first run took HTB's free **Puppet** mini Pro Lab from one entry address to full compromise:
 
