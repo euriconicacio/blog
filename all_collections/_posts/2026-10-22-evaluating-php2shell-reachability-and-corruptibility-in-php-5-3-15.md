@@ -101,7 +101,7 @@ CVE-2026-109619 is even shorter to dismiss. Its main pre-authentication trigger 
 
 Because the floor got copied off the wrong mechanism. Calif's write-up — the source the others draw on — gives *two* floors, for two different paths. For the hash-table corruption it says the RCE works against "mod_php and **PHP >= 7.3**". For the `session.upload_progress` path it says "mod_php and **PHP >= 5.4.0**". The 5.4.0 that propagated into "affects every PHP since 5.4" is the floor for the *upload-progress* path — CVE-2026-109619 — pinned to the version its trigger was introduced. It was never Calif's floor for the hash-table RCE, which they put two majors higher, at 7.3. The secondary write-ups flattened the two into one headline.
 
-The official records don't disagree so much as decline to say. PHP's advisories list only the supported branches, each with an upper bound and no lower bound. NVD then translates that into a CPE range whose oldest entry is `cpe:…:php:php:*` up to `< 8.2.35` with **no `versionStartIncluding`** — which a scanner reads as "every PHP below 8.2.35", and dutifully flags PHP 5.3. That is a mechanical artifact of a branch-only advisory, not a finding that 5.x was tested. If a scanner tells you your legacy PHP 5 host is exposed to CVE-2026-109618, this unbounded range is why.
+The official records don't disagree so much as decline to say. PHP's advisories list only the supported branches, each with an upper bound and no lower bound. NVD then translates that into a CPE range whose oldest entry is `cpe:…:php:php:*` up to `< 8.2.35` with **no `versionStartIncluding`** — which a scanner reads as "every PHP below 8.2.35", and dutifully flags PHP 5.3. That is a mechanical artifact of a branch-only advisory, not a finding that 5.x was tested. If a scanner tells you your legacy PHP 5 host is exposed to CVE-2026-109618, this unbounded range is why. *(NVD has since added lower bounds to both records; see the update at the end.)*
 
 I examined 5.3.15 end-to-end and the HashTable struct across every PHP 5 release; I did not run 5.4–5.6 in a lab, but the struct is identical across all of them, so the substrate argument carries the whole branch. What I have not done — and what nobody has shown — is a *different* OOM-bailout path reachable in PHP 5.x. The general property it would need (a fatal `longjmp` that skips cleanup) does exist there, so I will say "not affected by the known vector", not "immune".
 
@@ -113,5 +113,14 @@ I examined 5.3.15 end-to-end and the HashTable struct across every PHP 5 release
 None of this is a reason to keep running PHP 5. It went end-of-life years ago and carries a decade of other unpatched bugs; the right answer is still to migrate. It is only a reason not to spend an incident on this particular pair, and not to trust a scanner that flags it off an unbounded version range. "The vulnerable code pattern looks present" and "the vulnerability is present" are not the same claim. Reachable is not corruptible.
 
 The container build, the three-way differential, and the source comparison are in the toolkit, under [`lab/reproduction-php-5.3.15/`](https://github.com/euriconicacio/php2shell-validation-toolkit), so you can run the test and read the two struct definitions side by side rather than take my word for it.
+
+## Update, 23 October: NVD added the floors
+
+The afternoon this post went out, I sent NVD the struct comparison and the session-module evidence and asked for a lower bound on each record. They revised both CPE configurations on 23 October:
+
+- **[CVE-2026-109619](https://nvd.nist.gov/vuln/detail/CVE-2026-109619)**: the oldest range is now `>= 5.4.0, < 8.2.35`. That is the floor I proposed, the release that introduced `session.upload_progress`.
+- **[CVE-2026-109618](https://nvd.nist.gov/vuln/detail/CVE-2026-109618)**: the oldest range is now `>= 7.3.0, < 8.2.35`. I had asked for 7.0.0, the structural floor below which the primitive cannot exist. NVD went to 7.3.0, which matches Calif's scope for the hash-table RCE and [CrowdStrike's dating](https://www.crowdstrike.com/en-us/blog/crowdstrike-protects-customers-from-php-rce-zero-days/) of the exact ordering to an October 2017 change first shipped in 7.3.0, [raised on oss-security](https://www.openwall.com/lists/oss-security/2026/10/23/5) the same morning. My analysis rules out everything below 7.0 and says nothing about 7.0 to 7.2, so the two agree, and theirs is the tighter bound.
+
+A scanner working from current NVD data should no longer flag PHP 5.x for either CVE, or PHP 7.0 to 7.2 for CVE-2026-109618. If yours still does, its feed predates the change.
 
 *Eurico Nicacio —* [*@h3llh0und*](https://github.com/euriconicacio)
