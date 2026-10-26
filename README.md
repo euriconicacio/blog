@@ -10,9 +10,10 @@ all_collections/_posts/
 ```
 
 Dark by default, follows `prefers-color-scheme`, toggle persisted in
-`localStorage`. No web fonts. Page counts go to GoatCounter
-(cookieless, `h3llh0und.goatcounter.com`); the script loads only in
-production builds, so local previews are not counted.
+`localStorage`. No CDN, no web fonts. Page counts go to GoatCounter
+(cookieless, `h3llh0und.goatcounter.com`) through a self-hosted copy of
+its `count.js` in `assets/js/goatcounter.js`; it loads only in production
+builds, so local previews are not counted.
 
 Local build:
 

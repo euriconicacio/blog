@@ -40,8 +40,11 @@
   </script>
 
   {%- if jekyll.environment == "production" %}
-  <!-- Cookieless page counts; local previews build as development and are not counted. -->
+  {%- comment %}
+    Cookieless page counts; local previews build as development and are not counted.
+    count.js is served from here, not gc.zgo.at, so no third-party code runs on the page.
+  {% endcomment %}
   <script data-goatcounter="https://h3llh0und.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+          async src="{{ '/assets/js/goatcounter.js' | relative_url }}"></script>
   {%- endif %}
 </head>
