@@ -38,4 +38,10 @@
       } catch (e) { /* private mode: keep the dark default */ }
     })();
   </script>
+
+  {%- if jekyll.environment == "production" %}
+  <!-- Cookieless page counts; local previews build as development and are not counted. -->
+  <script data-goatcounter="https://h3llh0und.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  {%- endif %}
 </head>
